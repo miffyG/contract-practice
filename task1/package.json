@@ -22,6 +22,7 @@
   },
   "scripts": {
     "test": "npx hardhat test",
-    "deploy": "npx hardhat ignition deploy ignition/modules/LiquidityPool.ts --parameters ignition/parameters.json"
+    "deploy": "npx hardhat ignition deploy ignition/modules/LiquidityPool.ts --parameters ignition/parameters.json",
+    "deployToSepolia": "npx hardhat ignition deploy ignition/modules/LiquidityPool.ts --parameters ignition/parameters.json --network sepolia"
   }
 }

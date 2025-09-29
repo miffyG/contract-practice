@@ -3,8 +3,8 @@
     "tokenName": "MyMeme",
     "tokenSymbol": "MMM",
     "totalSupply": "2000000000000000000000000",
-    "marketingWallet": "0x13d823762349db76b1e20ea609d9030c90408abd",
-    "devWallet": "0x13d823762349db76b1e20ea609d9030c90408abd",
-    "liquidityWallet": "0x13d823762349db76b1e20ea609d9030c90408abd"
+    "marketingWallet": "0x9fb29f63ab634089be0c343a23fe7c2aeaf7682e",
+    "devWallet": "0x9fb29f63ab634089be0c343a23fe7c2aeaf7682e",
+    "liquidityWallet": "0x9fb29f63ab634089be0c343a23fe7c2aeaf7682e"
   }
 }
