@@ -33,7 +33,7 @@ const MetaNodeStakeModule = buildModule("MetaNodeStakeModule", (m) => {
     id: "MetaNodeStakeProxy"
   });
 
-  return { metaNodeToken, metaNodeStake };
+  return { metaNodeToken, proxy, metaNodeStake };
 });
 
 export default MetaNodeStakeModule;

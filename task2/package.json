@@ -25,6 +25,7 @@
   "scripts": {
     "test": "npx hardhat test",
     "deploy": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json",
-    "deployToSepolia": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json --network sepolia"
+    "deployToSepolia": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json --network sepolia",
+    "upgradeV2": "npx hardhat ignition deploy ignition/modules/UpgradeMetaNodeStakeV2.ts"
   }
 }
