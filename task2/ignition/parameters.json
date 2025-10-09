@@ -1,0 +1,8 @@
+{
+  "MetaNodeStakeModule": {
+    "metaNodePerBlock": "10000000000000000",
+    "startBlock": "3",
+    "durationDays": "180",
+    "endBlock": "65536"
+  }
+}

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.1",
     "@nomicfoundation/hardhat-ignition": "^3.0.3",
     "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
     "@types/chai": "^4.3.20",
@@ -15,5 +16,15 @@
     "hardhat": "^3.0.6",
     "mocha": "^11.7.2",
     "typescript": "~5.8.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "@openzeppelin/contracts-upgradeable": "^5.4.0",
+    "dotenv": "^17.2.3"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json",
+    "deployToSepolia": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json --network sepolia"
   }
 }

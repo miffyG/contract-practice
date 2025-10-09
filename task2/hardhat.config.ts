@@ -1,3 +1,4 @@
+import "dotenv/config";
 import type { HardhatUserConfig } from "hardhat/config";
 
 import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
@@ -9,10 +10,18 @@ const config: HardhatUserConfig = {
     profiles: {
       default: {
         version: "0.8.28",
+        settings: {
+          viaIR: true,
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       production: {
         version: "0.8.28",
         settings: {
+          viaIR: true,
           optimizer: {
             enabled: true,
             runs: 200,
@@ -20,6 +29,9 @@ const config: HardhatUserConfig = {
         },
       },
     },
+    npmFilesToBuild: [
+      "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+    ],
   },
   networks: {
     hardhatMainnet: {
