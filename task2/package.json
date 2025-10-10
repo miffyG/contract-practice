@@ -24,8 +24,9 @@
   },
   "scripts": {
     "test": "npx hardhat test",
-    "deploy": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json",
-    "deployToSepolia": "npx hardhat ignition deploy ignition/modules/MetaNodeStake.ts --parameters ignition/parameters.json --network sepolia",
-    "upgradeV2": "npx hardhat ignition deploy ignition/modules/UpgradeMetaNodeStakeV2.ts"
+    "deploy": "npx hardhat run scripts/deploy_to_sepolia.ts",
+    "upgradeV2": "npx hardhat ignition deploy ignition/modules/UpgradeMetaNodeStakeV2.ts",
+    "deployToSepolia": "npx hardhat run scripts/deploy_to_sepolia.ts --network sepolia",
+    "testOnSepolia": "npx hardhat test test/test_on_sepolia.ts --network sepolia"
   }
 }
