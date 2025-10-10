@@ -1,57 +1,37 @@
-# Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
+# MetaNodeStake - 可升级质押合约
 
-This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+基于 Hardhat 3.0 开发的去中心化质押系统，支持ETH质押和MetaNode代币奖励。
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+## 功能特性
 
-## Project Overview
+- 🔒 **ETH质押**：质押ETH获取MetaNode代币奖励
+- ⬆️ **可升级**：采用UUPS代理模式，支持合约升级  
+- ⏰ **分时挖矿**：基于区块高度的奖励分配
+- 🔐 **安全提取**：解质押锁定机制保障资金安全
 
-This example project includes:
+## 快速开始
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+```bash
+# 安装依赖
+npm install
 
-## Usage
+# 部署到Sepolia
+npm run deployToSepolia
 
-### Running Tests
-
-To run all the tests in the project, execute the following command:
-
-```shell
-npx hardhat test
+# 运行测试
+npm test
 ```
 
-You can also selectively run the Solidity or `mocha` tests:
+## 已部署合约 (Sepolia)
 
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
+- MetaNodeToken: `0xB0EfEad00Aca442dd835845B9F6f5d9eCf76efc4`
+- MetaNodeStake: `0x2940Ffd4613391ADBd13DCFacbDA4a5ffa6344A4`
+
+## 在sepolia上测试通过
+```
+npx hardhat test test/test_on_sepolia.ts --network sepolia
 ```
 
-### Make a deployment to Sepolia
+## 技术栈
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
-
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
-
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
-
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
-
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
-
-After setting the variable, you can run the deployment with the Sepolia network:
-
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+Solidity 0.8.28 | Hardhat 3.0 | OpenZeppelin | TypeScript
