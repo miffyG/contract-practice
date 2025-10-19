@@ -8,7 +8,7 @@
 
 ## 优化策略对比
 
-### 策略1：OptimizedArithmetic1 - 纯函数优化 🏆
+### 策略1：OptimizedArithmetic1 - 纯函数优化 
 
 **核心思想**：移除所有状态变量，将函数改为`pure`类型
 
@@ -200,7 +200,7 @@ forge test --match-path "test/*Arithmetic*.t.sol" --gas-report
 
 ## 结论
 
-通过两种不同的优化策略，我们成功展示了：
+通过两种不同的优化策略，成功展示了：
 
 1. **OptimizedArithmetic1**（纯函数）是最优选择，实现了97-98%的运行时gas节省
 2. **OptimizedArithmetic2**（unchecked + 自定义错误）在需要保持状态时提供了适度优化
